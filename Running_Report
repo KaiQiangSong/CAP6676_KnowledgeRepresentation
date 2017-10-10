@@ -1,0 +1,71 @@
+Data Loading...
+(581012, 12) (581012,) (12,)
+35.7924208641
+K-Fold-Splitting
+0.0607841014862
+Fold : 1
+Training...
+43.993901968
+Testing...
+Train Set
+Missing Rate: 0.0
+Correct Rate: 0.745390041931
+Error   Rate: 0.254609958069
+Test Set
+Missing Rate: 0.000111873187439
+Correct Rate: 0.739946472983
+Error   Rate: 0.25994165383
+0.0312421321869
+Fold : 2
+Training...
+21.432019949
+Testing...
+Train Set
+Missing Rate: 0.0
+Correct Rate: 0.744359511111
+Error   Rate: 0.255640488889
+Test Set
+Missing Rate: 6.02394086211e-05
+Correct Rate: 0.739318262007
+Error   Rate: 0.260621498584
+0.0217452049255
+Fold : 3
+Training...
+40.2927520275
+Testing...
+Train Set
+Missing Rate: 0.0
+Correct Rate: 0.727034702351
+Error   Rate: 0.272965297649
+Test Set
+Missing Rate: 0.000232354004234
+Correct Rate: 0.72052976713
+Error   Rate: 0.279237878866
+0.030070066452
+Fold : 4
+Training...
+30.6995511055
+Testing...
+Train Set
+Missing Rate: 0.0
+Correct Rate: 0.740818829199
+Error   Rate: 0.259181170801
+Test Set
+Missing Rate: 1.7211407721e-05
+Correct Rate: 0.739591401181
+Error   Rate: 0.260391387412
+0.028128862381
+Fold : 5
+Training...
+18.1940481663
+Testing...
+Train Set
+Missing Rate: 0.0
+Correct Rate: 0.736059895441
+Error   Rate: 0.263940104559
+Test Set
+Missing Rate: 0.000154902669489
+Correct Rate: 0.734849658354
+Error   Rate: 0.264995438977
+0.0224440097809
+
