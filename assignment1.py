@@ -41,15 +41,17 @@ if __name__ == '__main__':
         model = DecisionTree(data, label, mask)
         model.BuildTree(trainIndex)
         saveToPKL('model_'+str(Index), model)
-        print time.time() -st
+        print time.time() - st
         
         print 'Testing...'
         
+        st = time.time()
         labels, Mid, Cid, Eid, Mr, Cr, Er = model.Test(trainIndex)
         print 'Train Set'
         print 'Missing Rate:', Mr
         print 'Correct Rate:', Cr
-        print 'Error   Rate:', Er 
+        print 'Error   Rate:', Er
+        print time.time() - st 
         
         st = time.time()
         labels, Mid, Cid, Eid, Mr, Cr, Er = model.Test(testIndex)
@@ -58,4 +60,14 @@ if __name__ == '__main__':
         print 'Correct Rate:', Cr
         print 'Error   Rate:', Er 
         print time.time() - st
+        
+        print 'Evaluating...'
+        st = time.time()
+        recall, precision, f1_score, macro_f1 = model.eval(labels, testIndex)
+        print recall
+        print precision
+        print f1_score
+        print macro_f1
+        print time.time() - st
+        
         

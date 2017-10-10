@@ -177,3 +177,19 @@ class DecisionTree(object):
         
         return labels, MissingIndex, CorrectIndex, ErrorIndex, MRate, CRate, ERate
     
+    def eval(self, label_pred, index):
+        label_target = self.label[index]
+        EM = np.zeros((8,8), dtype = np.float32)
+        size = index.shape[0]
+        for i in range(size):
+            EM[label_target[i], label_pred[i]] += 1
+        precision, recall = [], []
+        for i in range(1,8):
+            recall.append(EM[i,i] / (EM[i,:].sum() + self.EPS))
+            precision.append(EM[i,i] / (EM[:,i].sum() + self.EPS))
+        
+        recall = np.asarray(recall, dtype = np.float32)
+        precision = np.asarray(precision, dtype = np.float32)
+        f1_score = 2 * recall * precision / (recall + precision + self.EPS)
+        
+        return recall, precision, f1_score, f1_score.mean()
